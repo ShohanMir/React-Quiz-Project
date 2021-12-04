@@ -1,0 +1,60 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from '../context/AuthContext';
+import '../styles/App.css';
+import Layout from './Layout';
+import Home from './page/Home';
+import Login from './page/Login';
+import Quiz from './page/Quiz';
+import Result from './page/Result';
+import Signup from './page/Signup';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+
+function App() {
+  return (
+    <Router>
+      <AuthProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="signup"
+              element={
+                <PublicRoute>
+                  <Signup />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="login"
+              element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="quiz/:id"
+              element={
+                <PrivateRoute>
+                  <Quiz />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/result/:id"
+              element={
+                <PrivateRoute>
+                  <Result />
+                </PrivateRoute>
+              }
+            />
+          </Routes>
+        </Layout>
+      </AuthProvider>
+    </Router>
+  );
+}
+
+export default App;
