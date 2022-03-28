@@ -1,12 +1,13 @@
 .nav {
   display: flex;
-  background-color: #fff;
+  background-color: var(--hoverColor);
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #1e1e1e52;
   z-index: 1;
+  box-shadow: 0 4px 2px -2px rgba(0, 108, 112, 0.233);
 }
 
 .nav ul {

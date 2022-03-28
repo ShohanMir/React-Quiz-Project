@@ -11,7 +11,7 @@ export default function Nav() {
         <li>
           <Link to="/" className={classes.brand}>
             <img src={logo} alt="React Project" />
-            <h3>React Project</h3>
+            <h3>Project Bangla</h3>
           </Link>
         </li>
       </ul>

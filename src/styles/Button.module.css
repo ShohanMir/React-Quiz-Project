@@ -1,6 +1,6 @@
 .button {
-  background: var(--successGreen);
-  color: var(--fontPrimary);
+  background: var(--hoverColor);
+  color: var(--colorA);
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   font-size: 15px;
@@ -12,13 +12,17 @@
   border-radius: 8px;
   cursor: pointer;
   border: 0px;
+  transition: all 0.3s ease;
+}
+.button span {
+  color: var(--colorA);
 }
 
 .button:hover {
-  background: var(--fontPrimary);
+  background: var(--color1);
   color: #fff;
 }
 
 .button:hover span {
-  color: #fff;
+  color: rgb(243, 243, 243);
 }

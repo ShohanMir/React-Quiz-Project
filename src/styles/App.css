@@ -3,11 +3,16 @@
 
 :root {
   --bodyBackground: #f2f4f8;
-  --successGreen: #00ff84;
-  --dangerRed: #ffc0c7;
+  --successGreen: #00ff73;
+  --color1: #ffa600;
+  --hoverColor: #00d9ff;
+  --hoverColor2: #101010;
+  --deepC: #ff5e00;
+  --colorA: #1e1e1e;
+  --dangerRed: #f04d60;
   --questionBG: #e4e8ee;
   --fontPrimary: #002333;
-  --active: #2dbf64;
+  --active: #f5c800;
 }
 
 * {
@@ -24,7 +29,15 @@ body {
 
 a {
   text-decoration: none;
-  color: blue;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1e1e1e;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  font-weight: 600;
+  color: var(--hoverColor2);
 }
 
 h4 {
